@@ -17,9 +17,10 @@
 		FC68AFE325B4E64F00DA3F40 /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68AFE225B4E64F00DA3F40 /* Filme.swift */; };
 		FC68AFE625B4E65A00DA3F40 /* Filmes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68AFE525B4E65A00DA3F40 /* Filmes.swift */; };
 		FC68AFEA25B4E6A500DA3F40 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68AFE925B4E6A500DA3F40 /* DataViewModel.swift */; };
-		FC68AFEF25B4E75000DA3F40 /* FilmesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68AFEE25B4E75000DA3F40 /* FilmesAPI.swift */; };
+		FC68AFEF25B4E75000DA3F40 /* FilmeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68AFEE25B4E75000DA3F40 /* FilmeService.swift */; };
 		FC68AFF425B4E89C00DA3F40 /* CustomizacaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68AFF325B4E89C00DA3F40 /* CustomizacaoTableViewCell.swift */; };
 		FC68AFFD25B4E9DA00DA3F40 /* ExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68AFFC25B4E9DA00DA3F40 /* ExtensionsViewController.swift */; };
+		FC68B00F25B4F2C800DA3F40 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68B00E25B4F2C800DA3F40 /* Bindable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +38,10 @@
 		FC68AFE225B4E64F00DA3F40 /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
 		FC68AFE525B4E65A00DA3F40 /* Filmes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filmes.swift; sourceTree = "<group>"; };
 		FC68AFE925B4E6A500DA3F40 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
-		FC68AFEE25B4E75000DA3F40 /* FilmesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesAPI.swift; sourceTree = "<group>"; };
+		FC68AFEE25B4E75000DA3F40 /* FilmeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeService.swift; sourceTree = "<group>"; };
 		FC68AFF325B4E89C00DA3F40 /* CustomizacaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizacaoTableViewCell.swift; sourceTree = "<group>"; };
 		FC68AFFC25B4E9DA00DA3F40 /* ExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsViewController.swift; sourceTree = "<group>"; };
+		FC68B00E25B4F2C800DA3F40 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				FC68AFF225B4E84000DA3F40 /* Views */,
 				FC68AFE825B4E69500DA3F40 /* ViewModels */,
 				FC68AFE125B4E64300DA3F40 /* Models */,
+				FC68B00D25B4F28000DA3F40 /* Core */,
 				FC68AFED25B4E73F00DA3F40 /* Service */,
 				FC68AFFB25B4E9B800DA3F40 /* Extension */,
 				FC68AFD125B4E55000DA3F40 /* Assets.xcassets */,
@@ -135,7 +138,7 @@
 		FC68AFED25B4E73F00DA3F40 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				FC68AFEE25B4E75000DA3F40 /* FilmesAPI.swift */,
+				FC68AFEE25B4E75000DA3F40 /* FilmeService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -155,6 +158,14 @@
 				FC68AFFC25B4E9DA00DA3F40 /* ExtensionsViewController.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FC68B00D25B4F28000DA3F40 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FC68B00E25B4F2C800DA3F40 /* Bindable.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,12 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC68B00F25B4F2C800DA3F40 /* Bindable.swift in Sources */,
 				FC68AFCD25B4E54B00DA3F40 /* ViewController.swift in Sources */,
 				FC68AFC925B4E54B00DA3F40 /* AppDelegate.swift in Sources */,
 				FC68AFEA25B4E6A500DA3F40 /* DataViewModel.swift in Sources */,
 				FC68AFCB25B4E54B00DA3F40 /* SceneDelegate.swift in Sources */,
 				FC68AFFD25B4E9DA00DA3F40 /* ExtensionsViewController.swift in Sources */,
-				FC68AFEF25B4E75000DA3F40 /* FilmesAPI.swift in Sources */,
+				FC68AFEF25B4E75000DA3F40 /* FilmeService.swift in Sources */,
 				FC68AFE325B4E64F00DA3F40 /* Filme.swift in Sources */,
 				FC68AFE625B4E65A00DA3F40 /* Filmes.swift in Sources */,
 				FC68AFF425B4E89C00DA3F40 /* CustomizacaoTableViewCell.swift in Sources */,

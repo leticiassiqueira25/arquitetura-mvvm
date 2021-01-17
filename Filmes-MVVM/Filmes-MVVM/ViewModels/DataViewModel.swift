@@ -15,6 +15,8 @@ class DataViewModel {
     var showLoading: (()->())?
     var hideLoading: (()->())?
     
+    var viewData: Bindable<DataViewModel?> = Bindable(nil)
+    
     private var cellViewModels: [DataListCellViewModel] = [DataListCellViewModel]() {
         didSet {
             self.reloadTableView?()
@@ -23,7 +25,7 @@ class DataViewModel {
     
     func getData(){
         showLoading?()
-        FilmesAPI.getDataFromServer { (success, filme) in
+        FilmeService().getDataFromServer { (success, filme) in
             self.hideLoading?()
             if success {
                 self.createCell(filmes: filme!)
