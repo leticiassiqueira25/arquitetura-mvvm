@@ -1,4 +1,3 @@
-//
 //  DataViewModel.swift
 //  Filmes-MVVM
 //
@@ -10,10 +9,10 @@ import UIKit
 class DataViewModel {
     
     var filmes: [Filme] = [Filme]()
-    var reloadTableView: (()->())?
-    var showError: (()->())?
-    var showLoading: (()->())?
-    var hideLoading: (()->())?
+    var reloadTableView: (() -> Void)?
+    var showError: (() -> Void)?
+    var showLoading: (() -> Void)?
+    var hideLoading: (() -> Void)?
     
     var viewData: Bindable<DataViewModel?> = Bindable(nil)
     

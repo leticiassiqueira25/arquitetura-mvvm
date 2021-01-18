@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
 
@@ -19,7 +18,7 @@ class ViewController: UIViewController {
         initViewModel()
     }
     
-    func initViewModel(){
+    func initViewModel() {
         dataViewModel.reloadTableView = {
             DispatchQueue.main.async { self.tableView?.reloadData() }
         }
@@ -37,13 +36,13 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataViewModel.numberOfCells
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell", for: indexPath) as? CustomTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customTableViewCell",
+                                                       for: indexPath) as? CustomTableViewCell else {
             fatalError("A célula não existe!")
         }
         let cellVM = dataViewModel.getCellViewModel( at: indexPath )
@@ -52,4 +51,3 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
-

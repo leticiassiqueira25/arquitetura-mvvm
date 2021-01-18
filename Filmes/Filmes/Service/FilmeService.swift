@@ -10,12 +10,12 @@ import UIKit
 import Alamofire
 
 protocol FilmeServiceProtocol {
-    func getDataFromServer(complete: @escaping (_ success: Bool, _ filme: [Filme]? )->() )
+    func getDataFromServer(complete: @escaping (_ success: Bool, _ filme: [Filme]? ) -> Void )
 }
 
 class FilmeService : FilmeServiceProtocol {
     
-    func getDataFromServer(complete: @escaping (Bool, [Filme]?) -> ()) {
+    func getDataFromServer(complete: @escaping (Bool, [Filme]? ) -> Void ) {
            
            let request = AF.request("https://api.themoviedb.org/3/trending/movie/week?api_key=4d3af2ecd868ddee8ae767825e9a0d64&language=pt-BR")
            
@@ -24,8 +24,8 @@ class FilmeService : FilmeServiceProtocol {
                
                var listaFilmes: [Filme] = [Filme]()
                
-               for i in 0...15{
-                   listaFilmes.append(Filme(title: "\(filmes.all[i].title)", overview: "\(filmes.all[i].overview)"))
+               for item in 0...15 {
+                   listaFilmes.append(Filme(title: "\(filmes.all[item].title)", overview: "\(filmes.all[item].overview)"))
                }
                
                complete(true, listaFilmes)
@@ -33,6 +33,5 @@ class FilmeService : FilmeServiceProtocol {
            }
         
     }
-    
     
 }
